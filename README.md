@@ -1,4 +1,4 @@
-[![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela11.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela11.png)
+
 [![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela10.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela10.png)
 [![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela12.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela12.png)
 [![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela13.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela13.png)
