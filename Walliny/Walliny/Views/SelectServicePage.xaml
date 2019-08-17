@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Walliny.ViewModels;assembly=Walliny"
+             x:Class="Walliny.Views.SelectServicePage">
+
+
+
+
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="Start"
+                 Spacing="20"
+                 Padding="20">
+
+        <Label Text="Serviço" FontSize="30" TextColor="RoyalBlue"/>
+        <Entry x:Name="InputEntry" Text="{Binding InputEntry}"  IsVisible="False"/>
+        <Entry x:Name="Longitude" Text="{Binding Lat_start_user}" IsVisible="False" />
+        <Entry x:Name="Latitude" Text="{Binding Log_end_user}"  IsVisible="False"/>
+        <Entry x:Name="UserId" Text="{Binding UserId}"  IsVisible="False"/>
+        <Entry x:Name="Id" Text="{Binding Id}" IsVisible="False"/>
+
+        <Label x:Name="Title" Text="{Binding Title}" 
+                                FontSize="30"
+                                />
+        <Label x:Name="Description" Text="{Binding Description}" />
+
+        <Entry x:Name="Id_Services"  Text="{Binding Id_Services}" />
+        <Label Text="Localização atual" FontSize="30" TextColor="RoyalBlue"/>
+
+        <Entry x:Name="reverseGeocodedOutputLabel"/>
+
+
+        <!-- <Label Text="{Binding Service.Description}" />-->
+        <!--<Label Text="{Binding Service.Category}" />-->
+
+        <Button Command="{Binding RequestServiceCommand}"
+                Text="Request services" 
+                x:Name="RequestServiceButton"
+                TextColor="White"
+                FontSize="30"
+                BackgroundColor="Blue"
+                IsVisible="True"
+                Clicked="RequestService"
+                VerticalOptions="EndAndExpand"/>
+
+        <Button Command="{Binding DeleteCommand}"
+                x:Name="CanselRequestButton"
+                Text="Cansel Request" 
+                TextColor="White"
+                FontSize="30"
+                IsVisible="False"
+                BackgroundColor="DeepPink"/>
+
+
+
+
+        <ContentView x:Name="actIndBackground"
+ BackgroundColor="#222222" Opacity="0.5"
+ AbsoluteLayout.LayoutFlags="All"
+ AbsoluteLayout.LayoutBounds="0,0,1,1"
+ IsVisible="True">
+        </ContentView>
+
+
+        <Frame x:Name="frameLayer" BackgroundColor="#FFFFFF"
+                                HorizontalOptions="CenterAndExpand"
+                                IsVisible="False"
+                                VerticalOptions="CenterAndExpand">
+
+            <StackLayout>
+
+                <ActivityIndicator x:Name="indicatorLoader" BackgroundColor="Transparent"
+                                                    IsRunning="True"
+                                                    IsVisible="False"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    Color="#607D8B" />
+
+                <Label HorizontalTextAlignment="Center" Text="Loading..."
+                                        TextColor="#000000"
+                                        XAlign="Center" />
+
+            </StackLayout>
+
+        </Frame>
+
+
+    </StackLayout>
+</ContentPage>

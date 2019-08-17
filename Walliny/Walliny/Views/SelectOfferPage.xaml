@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Walliny.ViewModels;assembly=Walliny"
+             x:Class="Walliny.Views.SelectOfferPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:SelectOfferViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20">
+
+        <Label Text="Serviço" FontSize="30" TextColor="RoyalBlue"/>
+        <Entry x:Name="InputEntry" Text="{Binding InputEntry}" IsVisible="False" />
+        <Entry x:Name="Longitude" Text="{Binding Lat_start_user}" IsVisible="False" />
+        <Entry x:Name="Latitude" Text="{Binding Log_end_user}" IsVisible="False" />
+        <Entry x:Name="UserIdd" Text="{Binding UserId}" />
+        <Entry x:Name="Id" Text="{Binding Id}"  IsVisible="False"/>
+        <Entry x:Name="Id_Servicess"  Text="{Binding Id_Services}"  />
+        <Label x:Name="Titlee" Text="{Binding Title}"/>
+        <Label x:Name="Descriptionn" Text="{Binding Description}"  />
+        
+        <Label Text="Localização atual" FontSize="30" TextColor="RoyalBlue"/>
+        <Entry x:Name="reverseGeocodedOutputLabell"  />
+        
+        
+
+        <Label Text="Valor" FontSize="30" TextColor="RoyalBlue"/>
+      <!-- <Label Text="{Binding DateTime, StringFormat='{0:T}'}"
+           FontSize="Large"
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+            <Label.BindingContext>
+                <viewModels:SelectOfferViewModel />
+            </Label.BindingContext>
+        </Label>--> 
+
+        <Button x:Name="BtnOfferServicesCommand" Command="{Binding OfferServicesCommand}"
+                Text="Search keyword"
+                FontSize="30"
+                TextColor="White"
+                BackgroundColor="DodgerBlue"
+                IsVisible="False"/>
+
+        <ListView x:Name="OfferServicesList"
+                  ItemsSource="{Binding OfferServices}"
+                  HasUnevenRows="True"
+                  ItemTapped="ServicesConfirm_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="0,10">
+                            <Label Text="{Binding Id_tb_users}"
+                                   FontSize="24"
+                                   TextColor="RoyalBlue"/>
+                            <Label Text="{Binding Estimation}"/>
+                            <Label Text="{Binding Price}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+        <ContentView x:Name="actIndBackground" BackgroundColor="#222222" Opacity="0.5" AbsoluteLayout.LayoutFlags="All" 
+                     AbsoluteLayout.LayoutBounds="0,0,1,1" IsVisible="{Binding Loading}">
+        </ContentView>
+        <Frame x:Name="frameLayer" BackgroundColor="#FFFFFF"
+                                HorizontalOptions="CenterAndExpand"
+                                IsVisible="{Binding Loading}"
+                                VerticalOptions="CenterAndExpand">
+            <StackLayout>
+                <ActivityIndicator x:Name="indicatorLoader" 
+                                   BackgroundColor="Transparent"
+                                   IsRunning="True"
+                                   IsVisible="{Binding Loading}"
+                                   VerticalOptions="CenterAndExpand"
+                                   Color="#607D8B" />
+                <Label HorizontalTextAlignment="Center" 
+                                        Text="Loading..."
+                                        TextColor="#000000"
+                                        XAlign="Center" />
+
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>

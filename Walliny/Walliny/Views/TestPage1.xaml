@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Walliny.Views.TestPage1"
+             Title="Walliny">
+
+    <!--<ContentPage.ToolbarItems>
+       <SearchBar x:Name="SearchFor"
+    			Placeholder="search for"
+				Text="{Binding Path=SearchText}"
+				 />
+    </ContentPage.ToolbarItems>-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Botão 1" Clicked="OnClickButtonOne" Order="Secondary" />
+        <ToolbarItem Text="Botão 2" Clicked="OnClickButtonTwo" Order="Secondary" />
+        <ToolbarItem Text="Botão 3" Clicked="OnClickButtonThree" Order="Primary" Icon="search.png" />
+
+    </ContentPage.ToolbarItems>
+    <SearchBar x:Name="SearchFor" Placeholder="search for" Text="{Binding Path=SearchText}"/>
+    <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+    <StackLayout Orientation="Vertical">
+        <Button Text="Get GPS Position"
+                Clicked="GetGpsOnclicked"/>
+        <Label Text="Latitude" TextColor="Gray" FontSize="20" />
+        <Label x:Name="LatitudeLabel" FontSize="30"/>
+        <Label Text="Longitude" TextColor="Gray" FontSize="20" />
+        <Label x:Name="LongitudeLabel" FontSize="30"/>
+        <Label Text="Address" TextColor="Gray" FontSize="20" />
+        <Label x:Name="LabelAddress"  />
+
+    </StackLayout>
+</ContentPage>

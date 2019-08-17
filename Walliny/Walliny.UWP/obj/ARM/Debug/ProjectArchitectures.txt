@@ -1,0 +1,2 @@
+C:\Users\Jayson\Documents\Visual Studio 2017\Projects\Walliny\Walliny\Walliny.UWP\Walliny.UWP.csproj;arm
+C:\Users\Jayson\Documents\Visual Studio 2017\Projects\Walliny\Walliny\Walliny\Walliny.csproj;neutral

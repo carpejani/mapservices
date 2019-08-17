@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Walliny.Views.TestPage3">
+    <ContentPage.Content>
+        <StackLayout Padding="0,20,0,0">
+            <Label Text="Reverse geocode:" />
+            <Entry x:Name="inputEntry" Text="-25.4581, -049.2156" />
+            <Button Text="Reverse Geocode" Clicked="OnReverseGeocodeButtonClicked" />
+            <Label x:Name="reverseGeocodedOutputLabel" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

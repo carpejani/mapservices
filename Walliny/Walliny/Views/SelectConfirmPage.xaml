@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Walliny.ViewModels;assembly=Walliny"
+             x:Class="Walliny.Views.SelectConfirmPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:SelectConfirmViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <StackLayout Padding="20">
+
+        <Label Text="Serviço" FontSize="30" TextColor="RoyalBlue"/>
+
+        <Entry x:Name="InputEntry" Text="{Binding InputEntry}"  IsVisible="False"/>
+        <Entry x:Name="Longitude" Text="{Binding Lat_start_user}" IsVisible="False" />
+        <Entry x:Name="Latitude" Text="{Binding Log_end_user}"  IsVisible="False"/>
+        <Entry x:Name="UserId" Text="{Binding UserId}"  IsVisible="True"/>
+        <Label x:Name="Title" Text="{Binding Title}" FontSize="30" />
+        <Label x:Name="Description" Text="{Binding Description}" />
+        <Entry x:Name="Id_Services"  Text="{Binding Id_Services}" />
+
+        <Label Text="Localização atual" FontSize="30" TextColor="RoyalBlue"/>
+
+        <Label x:Name="reverseGeocodedOutputLabel"/>
+
+        <Label Text="Valor" FontSize="30" TextColor="RoyalBlue"/>
+
+        <Entry x:Name="PriceLabel" Text="{Binding PriceLabel}" IsEnabled="False"/>
+        <Label Text="Payment" FontSize="30" TextColor="RoyalBlue"/>
+
+
+
+        <Picker Title="Select payment method" ItemsSource="{Binding BookTitles}" SelectedItem="{Binding SelectedBookTitle}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Card</x:String>
+                    <x:String>Money</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+
+        <Button x:Name="BtnOfferServicesCommand"
+                Command="{Binding ServiceConfirmPutCommand}"
+                Text="Confirm Request"
+                FontSize="30"
+                TextColor="White"
+                BackgroundColor="Green"
+                VerticalOptions="EndAndExpand"
+                />
+    </StackLayout>
+</ContentPage>

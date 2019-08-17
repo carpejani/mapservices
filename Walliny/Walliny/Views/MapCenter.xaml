@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             x:Class="Walliny.Views.MapCenter">
+    <StackLayout x:Name="MyMapStack">
+        <Maps:Map x:Name="MyMap" MyLocationEnabled="True" IsShowingUser="True"/>
+        <Button 
+                Text="Search Service"
+                FontSize="30"
+                TextColor="White"
+                BackgroundColor="DodgerBlue"
+                Clicked="NavigateToIdeasPage_OnClicked" />
+    </StackLayout>
+</ContentPage>
