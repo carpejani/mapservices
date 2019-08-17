@@ -1,7 +1,6 @@
 
 [![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela10.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela10.png)
 [![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela12.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela12.png)
-[![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela13.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela13.png)
 [![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela14.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela14.png)
 [![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela15.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela15.png)
 [![](https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela16.png)](http://https://github.com/carpejani/mapservices/blob/master/Walliny/Walliny/art/tela16.png)
